@@ -413,7 +413,8 @@ namespace netgen
 	case QUAD6: np = 6; break;
 	case QUAD8: np = 8; break;
 	default:
-	  PrintSysError ("Element2d::SetType, illegal type ", int(typ));
+    break;
+	  //PrintSysError ("Element2d::SetType, illegal type ", int(typ));
 	}
       is_curved = (np >= 4); 
     }
@@ -722,7 +723,7 @@ namespace netgen
 	case HEX:
 	  return 8;
         default: // not a 3D element
-#ifdef DEBUG
+#if 0
           PrintSysError ("Element3d::GetNV not implemented for typ ", typ);
 #endif
           __assume(false);
@@ -799,7 +800,7 @@ namespace netgen
 	case PRISM12: return 5;
         case HEX: return 6;
 	default:
-#ifdef DEBUG
+#if 0
 	  PrintSysError ("element3d::GetNFaces not implemented for typ", typ)
 #endif
 	    ;

@@ -15,19 +15,20 @@
 
 // #define DEBUG
 
-#ifdef WIN32
-   #if NGINTERFACE_EXPORTS || NGLIB_EXPORTS || nglib_EXPORTS
-      #define DLL_HEADER   __declspec(dllexport)
-   #else
-      #define DLL_HEADER   __declspec(dllimport)
-   #endif
-#else
-   #if __GNUC__ >= 4
-      #define DLL_HEADER __attribute__ ((visibility ("default")))
-   #else
-      #define DLL_HEADER
-   #endif
-#endif
+#define DLL_HEADER 
+//#ifdef WIN32
+//   #if NGINTERFACE_EXPORTS || NGLIB_EXPORTS || nglib_EXPORTS
+//      #define DLL_HEADER   __declspec(dllexport)
+//   #else
+//      #define DLL_HEADER   __declspec(dllimport)
+//   #endif
+//#else
+//   #if __GNUC__ >= 4
+//      #define DLL_HEADER __attribute__ ((visibility ("default")))
+//   #else
+//      #define DLL_HEADER
+//   #endif
+//#endif
 
 
 
