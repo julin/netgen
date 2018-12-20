@@ -426,7 +426,7 @@ namespace netgen
         return 3;
       else
         {
-#ifdef DEBUG
+#if 0
           if (typ != QUAD && typ != QUAD6 && typ != QUAD8)
             PrintSysError ("element2d::GetNV not implemented for typ", typ);
 #endif
